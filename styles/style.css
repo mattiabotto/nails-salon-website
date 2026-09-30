@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header,
+nav,
+nav ul,
+.hero-content {
+  display: flex;
+}
+
+header,
+.hero-content {
+  flex-direction: column;
+}
+
+nav {
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+}
+
+nav ul,
+.hero-content {
+  gap: 24px;
+}
+
+.hero-content {
+  padding: 24px;
+}
+
+.hero-content h1 {
+  font-family: "Ephesis", cursive;
+  font-size: 3rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+header {
+  background-color: hsl(8, 74%, 94%);
+  /* background-image: url('../img/background-header3.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; */
+  color:rgb(66, 47, 47);
+}
+
+.reserve-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+
+
+
+.reserve-button {
+  color:rgb(66, 47, 47);
+  background-color: rgb(255, 174, 187);
+  align-self: baseline;
+}
+
