@@ -41,13 +41,19 @@
       <h2 class="gallery-title">Naše práce</h2>
 
       <div class="slider-wrapper">
-        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
-        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
-        <div class="image-track"></div>
+        <button class="nav-btn prev-btn" id="prevBtn">❮</button>
+        
+        <!-- CHANGE 9: Wrapped the image track inside a masking frame to clip sliding visuals cleanly away from side arrows -->
+        <div class="image-slider-frame">
+          <div class="image-track"></div>
+        </div>
+        
+        <button class="nav-btn next-btn" id="nextBtn">❯</button>
       </div>
 
       <div class="dots-container"></div>
     </section>
+
   </main>
   
 </body>

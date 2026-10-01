@@ -82,7 +82,9 @@ header {
   display: inline-block;
 }
 
-/* Gallery section */
+main {
+  background-color: hsl(8, 100%, 97%);
+}
 
 .gallery {
   width: 100%;
@@ -90,84 +92,91 @@ header {
   text-align: center;
   margin: 0 auto;
   padding: 2em;
-  background-color: hsl(8, 100%, 97%);
+  background-color: inherit;
 }
 
 .gallery-title {
   font-size: 2rem;
   margin-bottom: 40px;
-  font-size: 400;
+  font-weight: 400;
 }
 
 .slider-wrapper {
-  position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  justify-content: space-between;
   width: 100%;
+  gap: 16px;
+}
+
+.image-slider-frame {
+  width: 100%;
+  overflow: hidden;
 }
 
 .image-track {
-    display: flex;
-    gap: 16px;
-    width: max-content;
-    transition: transform 0.4s ease-in-out;
-    padding: 0 2em;
+  display: flex;
+  gap: 16px;
+  width: 100%; 
+  transition: transform 0.4s ease-in-out;
+  padding: 0; 
+  transform: translateX(calc(-1 * var(--current-index, 0) * (100% / var(--images-per-view, 4)) - (var(--current-index, 0) * 16px / var(--images-per-view, 4))));
 }
 
 /* Responsive Image Items (4 per view) */
 .image-track img {
-    width: calc((100% - (15px * 3)) / 4); /* Splits space equally into 4 columns */
-    flex-shrink: 0;
-    object-fit: cover;
-    aspect-ratio: 3 / 4; /* Keeps a vertical rectangular frame */
+  flex: 0 0 calc((100% - (16px * 3)) / 4); 
+  width: calc((100% - (16px * 3)) / 4); 
+  object-fit: cover;
+  aspect-ratio: 3 / 4; 
 }
 
 /* Navigation Arrows */
 .nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #333;
-    z-index: 10;
-    padding: 10px;
+  position: static; 
+  transform: none; 
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+  padding: 10px;
 }
 
-.prev-btn { left: 0; }
-.next-btn { right: 0; }
+.prev-btn { }
+.next-btn { }
 
 /* Dots indicator */
 .dots-container {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
 }
 
 .dot {
-    width: 8px;
-    height: 8px;
-    background-color: #ddd;
-    border-radius: 50%;
-    cursor: pointer;
+  width: 8px;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .dot.active {
-    background-color: #a34e5b; /* Matches your active dot color */
+  background-color: #a34e5b; 
 }
 
 /* Responsive fix for mobile (Show fewer images per view) */
 @media (max-width: 768px) {
-    .image-track img {
-        width: calc((100% - 15px) / 2); /* 2 images per view on tablet */
-    }
+  .image-track img {
+      flex: 0 0 calc((100% - 16px) / 2);
+      width: calc((100% - 16px) / 2); 
+  }
 }
 @media (max-width: 480px) {
-    .image-track img {
-        width: 100%; /* 1 image per view on mobile phone */
-    }
+  .image-track img {
+      flex: 0 0 100%;
+      width: 100%; 
+  }
 }
