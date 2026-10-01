@@ -7,8 +7,10 @@
 }
 
 body {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: sans-serif;
   line-height: 1.5;
+  color:rgb(66, 47, 47);
 }
 
 ul {
@@ -20,41 +22,47 @@ a {
   color: inherit;
 }
 
+/* Header section */
+
 header,
 nav,
-nav ul,
-.hero-content {
+nav ul {
   display: flex;
 }
 
-header,
-.hero-content {
+header {
   flex-direction: column;
+  padding: 0 2em;
 }
 
 nav {
   justify-content: space-between;
-  padding: 16px;
+  padding: 1em;
   align-items: center;
 }
 
-nav ul,
-.hero-content {
-  gap: 24px;
+nav ul {
+  gap: 2em;
+  align-items: center;
 }
 
 .hero-content {
-  padding: 24px;
+  padding: 3em 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
 }
 
 .hero-content h1 {
   font-family: "Ephesis", cursive;
-  font-size: 3rem;
+  font-size: 4em;
 }
 
 .hero-content h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 header {
@@ -63,19 +71,103 @@ header {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; */
-  color:rgb(66, 47, 47);
 }
 
 .reserve-button {
-  padding: 12px 24px;
-  border-radius: 8px;
+  font-weight: bold;
+  padding: .7em 2em;
+  border-radius: 1.5em;
+  color:white;
+  background-color: rgb(255, 69, 122);
+  display: inline-block;
 }
 
+/* Gallery section */
 
-
-.reserve-button {
-  color:rgb(66, 47, 47);
-  background-color: rgb(255, 174, 187);
-  align-self: baseline;
+.gallery {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: hsl(8, 100%, 97%);
 }
 
+.gallery-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-size: 400;
+}
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    transition: transform 0.4s ease-in-out;
+    padding: 0 2em;
+}
+
+/* Responsive Image Items (4 per view) */
+.image-track img {
+    width: calc((100% - (15px * 3)) / 4); /* Splits space equally into 4 columns */
+    flex-shrink: 0;
+    object-fit: cover;
+    aspect-ratio: 3 / 4; /* Keeps a vertical rectangular frame */
+}
+
+/* Navigation Arrows */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+    padding: 10px;
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+/* Dots indicator */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #a34e5b; /* Matches your active dot color */
+}
+
+/* Responsive fix for mobile (Show fewer images per view) */
+@media (max-width: 768px) {
+    .image-track img {
+        width: calc((100% - 15px) / 2); /* 2 images per view on tablet */
+    }
+}
+@media (max-width: 480px) {
+    .image-track img {
+        width: 100%; /* 1 image per view on mobile phone */
+    }
+}

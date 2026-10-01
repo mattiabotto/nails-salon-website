@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script src="./script/script.js" defer></script>
   <title>Nails by Alice</title>
 </head>
 <body>
@@ -34,6 +35,20 @@
       <a href="" class="reserve-button">Rezervovat termin (Notino)</a>
     </div>
   </header>
+
+  <main>
+    <section class="gallery">
+      <h2 class="gallery-title">Naše práce</h2>
+
+      <div class="slider-wrapper">
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+        <div class="image-track"></div>
+      </div>
+
+      <div class="dots-container"></div>
+    </section>
+  </main>
   
 </body>
 </html>
