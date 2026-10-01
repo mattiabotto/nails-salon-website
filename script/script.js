@@ -31,7 +31,8 @@ function updateResponsiveSettings() {
 
   rebuildDots();
   
-  // CHANGE 6: Reverted boundary check math back to total pages framework so that the navigation slides items by screen block chunks rather than single individual items.
+  //  Reverted boundary check math back to total pages framework so that the navigation slides items by screen 
+  // block chunks rather than single individual items.
   const totalPages = Math.ceil(totalImages / imagesPerView);
   if (currentIndex >= totalPages) {
       currentIndex = totalPages - 1;
@@ -43,7 +44,7 @@ function updateResponsiveSettings() {
 function rebuildDots() {
   dotsContainer.innerHTML = ""; 
   
-  // CHANGE 7: Dots now reflect total pages (e.g., 3 pages on Desktop, 6 pages on Tablet, 11 pages on Mobile).
+  // Dots now reflect total pages (e.g., 3 pages on Desktop, 6 pages on Tablet, 11 pages on Mobile).
   const totalPages = Math.ceil(totalImages / imagesPerView);
   for (let i = 0; i < totalPages; i++) {
       const dot = document.createElement("span");
@@ -58,12 +59,12 @@ function rebuildDots() {
 function moveSlider(pageIndex) {
   const totalPages = Math.ceil(totalImages / imagesPerView);
   
-  // CHANGE 8: Boundary safeguard checks bounds by pageIndex now
+  // Boundary safeguard checks bounds by pageIndex now
   if (pageIndex < 0 || pageIndex >= totalPages) return;
   
   currentIndex = pageIndex;
   
-  // CHANGE 9: Send index to CSS layout tracking variable to animate the entire page frame change instantly
+  // Send index to CSS layout tracking variable to animate the entire page frame change instantly
   track.style.setProperty('--current-index', currentIndex);
   
   const dots = document.querySelectorAll(".dot");

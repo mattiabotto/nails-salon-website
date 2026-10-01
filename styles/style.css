@@ -87,6 +87,8 @@ main {
   background-color: hsl(8, 100%, 97%);
 }
 
+/* Gallery section */
+
 .gallery {
   width: 100%;
   max-width: 1200px;
@@ -97,9 +99,9 @@ main {
 }
 
 .gallery-title {
-  font-size: 2rem;
+  font-size: 2em;
   margin-bottom: 40px;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .slider-wrapper {
@@ -110,7 +112,6 @@ main {
   gap: 16px;
 }
 
-/* CHANGE 2: Added flex-grow and set overflow:hidden here to keep it perfectly restricted inside the parent flex layout boundary */
 .image-slider-frame {
   flex-grow: 1;
   overflow: hidden;
@@ -123,8 +124,6 @@ main {
   width: 100%; 
   transition: transform 0.4s ease-in-out;
   padding: 0; 
-  
-  /* CHANGE 3: Rewrote the transform calculation back to traditional page-by-page shifts (currentIndex * 100%). We add a gap factor adjustment so that it accounts for the CSS grid spacing gaps dynamically when skipping over sets of images. */
   transform: translateX(calc(-1 * var(--current-index, 0) * 100% - (var(--current-index, 0) * 16px)));
 }
 
@@ -172,14 +171,24 @@ main {
 /* Responsive fix for mobile (Show fewer images per view) */
 @media (max-width: 768px) {
   .image-track img {
-    /* CHANGE 4: Tablet layout handles 2 items matching one single explicit horizontal gap */
     flex: 0 0 calc((100% - 16px) / 2);
     width: calc((100% - 16px) / 2); 
   }
 }
 @media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+
+  .slider-wrapper {
+    min-width: 0;
+  }
+
+  .image-slider-frame {
+    min-width: 0;
+  }
+
   .image-track img {
-    /* CHANGE 5: Mobile layout elements scale to clean full 100% widths with zero spacing conflicts */
     flex: 0 0 100%;
     width: 100%; 
   }
