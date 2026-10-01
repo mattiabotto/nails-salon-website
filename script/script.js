@@ -1,5 +1,5 @@
 const folderPath = "../img/gallery/";
-const totalImages = 11; 
+const totalImages = 16; 
 
 const track = document.querySelector(".image-track");
 const dotsContainer = document.querySelector(".dots-container");
