@@ -11,6 +11,7 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
   color:rgb(66, 47, 47);
+  overflow-x: hidden;
 }
 
 ul {
@@ -109,9 +110,11 @@ main {
   gap: 16px;
 }
 
+/* CHANGE 2: Added flex-grow and set overflow:hidden here to keep it perfectly restricted inside the parent flex layout boundary */
 .image-slider-frame {
-  width: 100%;
+  flex-grow: 1;
   overflow: hidden;
+  width: 100%;
 }
 
 .image-track {
@@ -120,7 +123,9 @@ main {
   width: 100%; 
   transition: transform 0.4s ease-in-out;
   padding: 0; 
-  transform: translateX(calc(-1 * var(--current-index, 0) * (100% / var(--images-per-view, 4)) - (var(--current-index, 0) * 16px / var(--images-per-view, 4))));
+  
+  /* CHANGE 3: Rewrote the transform calculation back to traditional page-by-page shifts (currentIndex * 100%). We add a gap factor adjustment so that it accounts for the CSS grid spacing gaps dynamically when skipping over sets of images. */
+  transform: translateX(calc(-1 * var(--current-index, 0) * 100% - (var(--current-index, 0) * 16px)));
 }
 
 /* Responsive Image Items (4 per view) */
@@ -143,9 +148,6 @@ main {
   z-index: 10;
   padding: 10px;
 }
-
-.prev-btn { }
-.next-btn { }
 
 /* Dots indicator */
 .dots-container {
@@ -170,13 +172,15 @@ main {
 /* Responsive fix for mobile (Show fewer images per view) */
 @media (max-width: 768px) {
   .image-track img {
-      flex: 0 0 calc((100% - 16px) / 2);
-      width: calc((100% - 16px) / 2); 
+    /* CHANGE 4: Tablet layout handles 2 items matching one single explicit horizontal gap */
+    flex: 0 0 calc((100% - 16px) / 2);
+    width: calc((100% - 16px) / 2); 
   }
 }
 @media (max-width: 480px) {
   .image-track img {
-      flex: 0 0 100%;
-      width: 100%; 
+    /* CHANGE 5: Mobile layout elements scale to clean full 100% widths with zero spacing conflicts */
+    flex: 0 0 100%;
+    width: 100%; 
   }
 }
