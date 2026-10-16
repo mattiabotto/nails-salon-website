@@ -67,20 +67,6 @@ h3.text-pink {
   font-size: 1rem;
 }
 
-
-/* .table>:not(caption)>*>* {
-  background-color: #ffd9ef;
-}
-
-.table tr {
-  display: flex;
-  justify-content: space-between;
-}
-
-.table td {
-  padding-left: 0;
-} */
-
 #contact i.text-pink {
   color: #380021;
   margin-right: 1rem;
@@ -101,4 +87,10 @@ h3.text-pink {
 
 #contact h3.text-pink {
   font-size: 1rem;
+}
+
+/* Styling for your icon tray / container */
+.notino-link {
+  display: inline-block;
+  transition: opacity 0.2s ease-in-out;
 }
