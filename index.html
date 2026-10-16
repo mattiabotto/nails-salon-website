@@ -1,99 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Nails by Alice</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto + Ephesis -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/e270a58a6a.js" crossorigin="anonymous"></script>
-  <script src="./script/script.js" defer></script>
-  <title>Nails by Alice</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ephesis&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="./img/logo.svg" alt="Logo se dvěma zkříženýma rukama a červeně nalakovanými nehty" width="64" height="64">
-      </div>
-      
-      <div class="nav-links">
-        <ul>
-          <li><a href="">O mně</a></li>
-          <li><a href="">Ceník</a></li>
-          <li><a href="">Kontakt</a></li>
-          <li><a href="" class="reserve-button">Rezervovat (Notino)</a></li>
+
+<body id="top" class="bg-pink">
+  <!-- Navbar -->
+  <nav id="nav-bar" class="navbar navbar-expand-md sticky-top nav-pink">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Toggle button -->
+      <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-secondary"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-md-0" href="#top">
+          <img src="./img/logo.svg" alt="Logo se dvěma zkříženýma rukama a červeně nalakovanými nehty" height="40"
+            loading="lazy">
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item me-2 me-xl-3">
+            <a class="nav-link text-secondary fw-bold" href="#gallery">Galerie</a>
+          </li>
+          <li class="nav-item me-2 me-xl-3">
+            <a class="nav-link text-secondary fw-bold" href="#about">O mně</a>
+          </li>
+          <li class="nav-item me-2 me-xl-3">
+            <a class="nav-link text-secondary fw-bold" href="#pricing">Ceník</a>
+          </li>
+          <li class="nav-item me-2 me-xl-3">
+            <a class="nav-link text-secondary fw-bold" href="#contact">Kontakt</a>
+          </li>
         </ul>
+        <!-- Left links -->
       </div>
-    </nav>
+      <!-- Collapsible wrapper -->
 
-    <div class="hero-content">
-      <h1>Nails by Alice</h1>
-      <h2>Manikúra a pedikúra</h2>
-      <p>Krásné nehty nejsou jen o vzhledu, ale i o pocitu, který vám dodají.</p>
-
-      <a href="" class="reserve-button">Rezervovat termin (Notino)</a>
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="text-secondary me-4" href="https://www.instagram.com/nailsbyalice_kv" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-instagram fa-xl"></i>
+        </a>
+        <a class="text-secondary ms-2" href="https://www.facebook.com/profile.php?id=61579007579081" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-facebook fa-xl"></i>
+        </a>
+      </div>
+      <!-- Right elements -->
     </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+  <header class="mb-6 mb-lg-8">
+    <!-- Hero section -->
+    <section class="bg-image vh-100" id="hero-img">
+
+      <!-- Mask for better contrast -->
+      <div class="mask">
+        <!-- Container -->
+        <div class="container d-flex justify-content-center align-items-center h-100">
+          <!-- Call to action -->
+          <div class="text-white text-center">
+            <h1 class="mb-4 brand-name">Nails by Alice</h1>
+            <h2 class="mb-3 fs-4">Manikúra a pedikúra</h2>
+            <p class="mb-5">Krásné nehty nejsou jen o vzhledu, ale i o pocitu, který vám dodají.</p>
+            <a href="https://www.notino.cz/salony/nails-by-alice_1/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary btn-rounded btn-lg m-2" role="button" data-mdb-ripple-init
+              data-mdb-ripple-color="primary">Rezervovat termin (Notino)<i
+                class="fas fa-circle-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </header>
 
-  <main>
-    <section class="gallery">
-      <h2 class="gallery-title">Moje práce</h2>
+  <main class="bg-pink">
+    <div class="container">
 
-      <div class="slider-wrapper">
-        <button class="nav-btn prev-btn" id="prevBtn">❮</button>
-        
-        <div class="image-slider-frame">
-          <div class="image-track"></div>
+      <!-- Gallery with carousel -->
+      <section id="gallery" class="mb-6 mb-lg-8">
+        <h2 class="text-center text-pink fs-1 fw-bold mb-5">Galerie</h2>
+        <div class="row">
+          <div class="col col-md-8 col-lg-7 col-xl-5 mx-auto">
+            <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-mdb-ride="carousel"
+              data-mdb-carousel-init>
+              <div class="carousel-indicators">
+                <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner rounded-6 shadow-4-strong">
+                <div class="carousel-item active">
+                  <img src="./img/gallery/img2.jpg" class="d-block w-100" alt="Wild Landscape" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/gallery/img3.jpg" class="d-block w-100" alt="Camera" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/gallery/img4.jpg" class="d-block w-100" alt="Exotic Fruits" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCrossfade"
+                data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCrossfade"
+                data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
-        
-        <button class="nav-btn next-btn" id="nextBtn">❯</button>
-      </div>
+      </section>
 
-      <div class="dots-container"></div>
-    </section>
+      <!-- About section -->
+      <section id="about" class="row d-flex justify-content-center mb-6 mb-lg-8">
+        <div class="col-md-10 col-xl-8">
+          <h2 class="text-pink text-center mb-5">O mně</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nisi consectetur, soluta ratione
+            provident
+            quam sed qui ab iusto impedit tempora! Est illum iste doloremque hic dolore ducimus aliquid consequuntur!
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad veniam ipsum qui culpa consequatur voluptas
+            commodi sit provident adipisci debitis non error quam soluta iure, officia eveniet, quo incidunt. Quia.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint similique sed ipsa delectus rerum
+            vel
+            pariatur iusto eum, repellendus consequatur dignissimos nostrum ea reprehenderit! Cum quo officia ex
+            inventore?</p>
+        </div>
+      </section>
 
-    <section class="services">
-      <h2>Služby</h2>
-      <ul>
-        <li>
-          <img src="./img/manicure.png" alt="Manicure icon" width="100px" height="100px">
-          <p>Manicure</p>
-        </li>
-        <li>
-          <img src="./img/pedicure.png" alt="Pedicure icon" width="100px" height="100px">
-          <p>Pedicure</p>
-        </li>
-        <li>
-          <img src="./img/manicure.png" alt="Manicure icon" width="100px" height="100px">
-          <p>Manicure</p>
-        </li>
-        <li>
-          <img src="./img/pedicure.png" alt="Pedicure icon" width="100px" height="100px">
-          <p>Pedicure</p>
-        </li>
-      </ul>
-    </section>
+      <!-- Pricing section -->
+      <section id="pricing" class="row mb-6 mb-lg-8 d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8">
+          <h2 class="text-pink text-center mb-5">Ceník</h2>
+
+          <h3 class="text-pink fs-5 mb-4">Manikúra</h3>
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Classic Manicure (<span><i class="far fa-clock fa-xs me-2"></i>45m</span>) </h4>
+              <p>Klasická manikúra (bez lakování). Kompletní péče o vaše přirozené nehty a ruce. Služba
+                zahrnuje
+                dezinfekci, zkrácení a úpravu tvaru nehtů, šetrné ošetření a vyčištění nehtové kůžičky, vyhlazení
+                ploténky a závěrečnou hydrataci v podobě výživného olejíčku a krému. Ideální volba pro zdravý, čistý a
+                pěstěný vzhled nehtů.</p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">500 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Kombinovaná manikúra s lakováním – gel lak (<span><i
+                    class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Precizní hloubkové ošetření rukou pro dokonale upravený vzhled, který vydrží týdny. Kombinovaná
+                manikúra spojuje použití přístrojových frézek a klasických nůžek nebo kleštiček, což umožňuje dokonale
+                vyčistit nehtové okolí a upravit kůžičku. Díky tomu můžeme barvu aplikovat až těsně pod kůžičku, takže
+                odrosty budou viditelné mnohem později. V ceně ošetření je zahrnuto lakování hybridním lakem (gellakem)
+                nebo zpevňující bází za použití UV/LED lampy. Nehty jsou okamžitě suché, pevné a mají vysoký lesk.
+                Proceduru zakončíme nanesením hydratačního balzámu nebo pěny na ruce a aplikací výživného olejíčku na
+                nehtové kůžičky.</p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">700 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Lakování nehtů na rukou one step gel lakem (<span><i
+                    class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Ideální volba pro ty, kteří spěchají, ale přesto touží po dokonale upravených nehtech s dlouhou výdrží.
+                Tato procedura využívá inovativní jednofázový gellak (3v1), který v jedné lahvičce spojuje podkladovou
+                bázi, sytou barvu i vrchní lesk. Lak se vytvrzuje v profesionální UV/LED lampě, takže je okamžitě suchý
+                a nehrozí jeho rozmazání. Díky vynechání mezikroků šetříme váš čas, aniž bychom slevili z pevnosti a
+                vysokého lesku. Proceduru zakončíme nanesením hydratačního balzámu nebo pěny na ruce a aplikací
+                výživného olejíčku na nehtové kůžičky.</p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">600 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Pánská manikúra Basic (<span><i class="far fa-clock fa-xs me-2"></i>45m</span>)
+              </h4>
+              <p>Pánská manikúra Basic je rychlé a efektivní ošetření pro vaše ruce. Zahrnuje základní úpravu nehtů a
+                zastřižení kůžičky. Může být zakončena aplikací výživného oleje nebo laku.</p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">500 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Lakování nehtů na rukou gel lakem (<span><i
+                    class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Aplikace gel laku pro zpevnění nehtů.</p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">500 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Lakování nehtů na rukou gel lakem + zpevnění nehtů (<span><i
+                    class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Dokonalá manikúra navržená speciálně pro slabé, křehké nebo třepivé nehty, které potřebují extra
+                podporu. Tato procedura kombinuje estetickou krásu gellaku a hloubkové zpevnění. Na nehtovou ploténku
+                aplikujeme speciální hustou, kaučukovou nebo proteinovou bázi (případně kamuflážní bázi, např. řady Dark
+                Pro Base), která nehet mechanicky zpevní, vyrovná jeho nerovnosti a vytvoří dokonalou architekturu
+                (linii světla). Výsledkem jsou pevné, pružné a odolné nehty, které se nelámou a neohýbají. Na tuto
+                zpevněnou vrstvu následně nanášíme sytou barvu a vrchní lesk, které se vytvrzují v UV/LED lampě.
+                Proceduru zakončíme nanesením hydratačního balzámu nebo pěny na ruce a výživným olejíčkem na kůžičky.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">700 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Odstranění gel laku na rukou (<span><i class="far fa-clock fa-xs me-2"></i>20m</span>)
+              </h4>
+              <p>Odstranění gellaku je za pomocí acetonu.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">300 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Suchá manikúra s lakováním – gel lak (<span><i
+                    class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Kosmetické ošetření nehtů a rukou za pomoci změkčovače, který pomůže odstranit nehtové kůžičky a
+                zároveň nehet vyživuje. Poté se na nehty aplikuje gelový lak, který je vhodný na přírodní i umělé nehty.
+
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">700 kč</p>
+            </div>
+          </div>
+
+          <h3 class="text-pink fs-5 mb-4">Dámská pedikúra</h3>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Lakování nehtů na nohou gel lakem (<span><i class="far fa-clock fa-xs me-2"></i>1h
+                  45m</span>)
+              </h4>
+              <p></p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">700 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Odstranění gel laku na nohou (<span><i class="far fa-clock fa-xs me-2"></i>20m</span>)
+              </h4>
+              <p>Odstranění gel laku z nehtů.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">200 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Peeling nohou (<span><i class="far fa-clock fa-xs me-2"></i>10m</span>)
+              </h4>
+              <p>
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">150 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Mokrá pedikúra s lakováním (<span><i class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Kompletní ošetření chodidel metodou na mokro, které v sobě spojuje hloubkovou péči a dlouhotrvající
+                vzhled nehtů. Procedura začíná uvolňující teplou koupelí, po které následuje odstranění ztvrdlé kůže,
+                otlaků a profesionální úprava nehtů i kůžičky. V ceně ošetření je zahrnuto lakování hybridním lakem
+                (gellakem) nebo zpevňující bází za použití UV/LED lampy, takže lak je okamžitě suchý. Celou proceduru
+                zakončíme nanesením výživného balzámu nebo lehké hydratační pěny na stopy a aplikací pečujícího olejíčku
+                na nehtové kůžičky. Vaše nohy tak budou nejen krásné, ale také dokonale hebké a zregenerované.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">700 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Suchá pedikúra s lakováním (<span><i class="far fa-clock fa-xs me-2"></i>1h 45m</span>)
+              </h4>
+              <p>Ošetření nohou na sucho profesionálním přístrojem s následnou aplikací laku na nehty.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">700 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Klasická Pedicura (<span><i class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Kosmetické ošetření nehtů a rukou za pomoci změkčovače, který pomůže odstranit nehtové kůžičky a
+                zároveň nehet vyživuje. Poté se na nehty aplikuje gelový lak, který je vhodný na přírodní i umělé nehty.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">600 kč</p>
+            </div>
+          </div>
+
+          <h3 class="text-pink fs-5 mb-4">Pánská pedikúra</h3>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Mokrá pedikúra (<span><i class="far fa-clock fa-xs me-2"></i>1h</span>)
+              </h4>
+              <p>Tradiční a velmi příjemná metoda péče o mužská chodidla. Základem této procedury je relaxační vodní
+                lázeň, která změkčí kůži i nehty a připraví je na následné ošetření. Tato pedikúra je ideální pro muže,
+                kteří mají velmi tvrdou kůži, hluboké praskliny na patách nebo si chtějí u procedury především
+                odpočinout.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">600 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Suchá pedikúra (<span><i class="far fa-clock fa-xs me-2"></i>1h</span>)
+              </h4>
+              <p>Moderní, maximálně šetrná a bezbolestná metoda ošetření chodidel a nehtů určená speciálně pro muže. Na
+                rozdíl od klasické mokré pedikúry se při této proceduře nepoužívá vodní lázeň ani skalpel. Veškeré
+                ošetření probíhá za sucha pomocí profesionálního vysokootáčkového přístroje s medicínskými frézami.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">600 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Peeling nohou (<span><i class="far fa-clock fa-xs me-2"></i>10m</span>)
+              </h4>
+              <p>
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">150 kč</p>
+            </div>
+          </div>
+
+          <h3 class="text-pink fs-5 mb-4">Zdobení nehtů</h3>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Francouzská manikúra (<span><i class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">800 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Svatební manikúra (<span><i class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>
+                Svatební manikúra je péče o nehty a ruce navržená speciálně pro váš velký den. Procedura zahrnuje
+                pečlivou úpravu nehtů a kůžičky, aplikaci speciálních produktů a závěrečné lakování lakem dle výběru.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">750 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Francouzská pedikúra (<span><i class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">850 kč</p>
+            </div>
+          </div>
+
+          <h3 class="text-pink fs-5 mb-4">Modeláž nehtů</h3>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Doplnění gelových nehtů (<span><i class="far fa-clock fa-xs me-2"></i>10m</span>)
+              </h4>
+              <p>Doplnění gelu na nehty.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">100 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Odstranění gelových nehtů (<span><i class="far fa-clock fa-xs me-2"></i>20m</span>)
+              </h4>
+              <p>Odstranění gel laku z nehtů.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">300 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Oprava zlomeného nehtu (<span><i class="far fa-clock fa-xs me-2"></i>15m</span>)
+              </h4>
+              <p>
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">150 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Odstranění modeláže nehtů na rukou + manikúra (<span><i
+                    class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Odstranění modeláže nehtů na rukou je procedura, která zajistí šetrné odstranění gelových, akrylových
+                nebo polygelových nehtů bez poškození přírodních nehtů. Součástí může být také nová manikúra, která
+                obvykle zahrnuje úpravu tvaru nehtů, péči o nehtovou kůžičku a finální lakování.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">700 kč</p>
+            </div>
+          </div>
+
+          <!-- Price item -->
+          <div class="row price-item mb-3">
+            <div class="col-9">
+              <h4 class="mb-3">Nové nehty gelové (<span><i class="far fa-clock fa-xs me-2"></i>2h</span>)
+              </h4>
+              <p>Modeláž nehtů pomocí gelu.
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="text-end price">700 kč</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Contact section and map-->
+      <section id="contact" class="row mb-6 mb-lg-8 d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8">
+          <!-- Contacts -->
+          <div class="row gx-lg-5">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <h2 class="text-pink mb-4">Kontakt</h2>
+              <h3 class="text-pink mb-2">Zarezervuj si termín jedním z těchto způsobů:</h3>
+              <ul class="list-group list-group-light">
+                <li class="list-group-item border-0">
+                  <i class="fas fa-phone text-pink" aria-label="Mobil"></i>
+                  <a href="tel:+420770317414">+420770317414</a>
+                </li>
+                <li class="list-group-item border-0 d-flex align-items-center">
+                  <i class="fab fa-whatsapp text-pink me-3 fa-xl" aria-label="Whatsapp number: +48 724381901"></i>
+                  <a href="https://wa.me/48724381901" target="_blank" rel="noopener noreferrer">Whatsapp</a>
+                </li>
+                <li class="list-group-item border-0"><i class="far fa-envelope text-pink" aria-label="E-mail"></i><a
+                    href="mailto:nailsbyalice99@gmail.com" target="_blank"
+                    rel="noopener noreferrer">nailsbyalice99@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Map -->
+            <div class="col-lg-7 d-block d-lg-flex justify-content-end">
+              <div>
+                <h2 class="text-pink mb-4"><i class="fas fa-location-dot fa-xs me-3"></i>Lokalita</h2>
+                <p class="mb-4">U Trati 57/5, 360 04 Karlovy Vary 4-Bohatice</p>
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d451.08129300485757!2d12.878133400556534!3d50.241488159839705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a099165261c1b1%3A0xfdb180c7abd6a4cf!2sU%20Trati%2057%2F5%2C%20360%2004%20Karlovy%20Vary%204-Bohatice!5e0!3m2!1sen!2scz!4v1792150103715!5m2!1sen!2scz"
+                    allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <div class="left">
-      <div class="logo">
-          <img src="./img/logo.svg" alt="Logo se dvěma zkříženýma rukama a červeně nalakovanými nehty" width="64" height="64">
-      </div>
-      <h2>Nails by Alice</h2>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-muted bg-pink-light">
+    <div class="container">
+
+      <!-- Social media -->
+      <section class="row">
+        <!-- Left -->
+        <div class="col-md-10 col-xl-8 mx-auto d-flex justify-content-between align-items-center py-3">
+          <div>
+            <a href="#top">
+              <img src="./img/logo.svg" alt="Logo se dvěma zkříženýma rukama a červeně nalakovanými nehty" height="40"
+                loading="lazy">
+            </a>
+            <h2 class="text-pink brand-name d-inline ms-2 ms-lg-3">Nails by Alice</h2>
+          </div>
+
+          <!-- Right -->
+          <div>
+            <div class="me-4 d-none d-lg-inline">
+              <span>Sleduj mě:</span>
+            </div>
+            <a href="https://www.instagram.com/nailsbyalice_kv" target="_blank" rel="noopener noreferrer"
+              class="me-4 text-reset">
+              <i class="fab fa-instagram fa-xl"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61579007579081" class="me-4 text-reset" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fab fa-facebook fa-xl"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Copyright -->
+      <section class="row">
+        <div class="col text-center fs-6">
+          <!-- Center copyright -->
+          <p>&copy; 2026 Nails By Alice</p>
+        </div>
+      </section>
+
     </div>
 
-    <div class="right">
-      <p>Sledujte mě</p>
-      <a href="https://www.instagram.com/nailsbyalice_kv" target="_blank" aria-label="Instagram">
-        <i class="fa-brands fa-instagram fa-2xl"></i>
-      </a> 
-      <a href="https://www.facebook.com/profile.php?id=61579007579081" target="_blank" aria-label="Facebook">
-        <i class="fa-brands fa-square-facebook fa-2xl"></i>
-      </a>
-    </div>
   </footer>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navContainer = document.querySelector('.navbar-collapse');
+
+      if (navContainer) {
+        navContainer.querySelectorAll('.navbar-nav .nav-link, .navbar-brand').forEach(link => {
+          link.addEventListener('click', () => {
+            // Instantly shut the menu container without an animation trigger
+            navContainer.classList.remove('show');
+          });
+        });
+      }
+    });
+
+  </script>
 </body>
+
 </html>
