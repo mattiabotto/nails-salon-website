@@ -120,13 +120,7 @@
               </div>
               <div class="carousel-inner rounded-6 shadow-4-strong">
                 <div class="carousel-item active">
-                  <img src="./img/gallery/img2.jpg" class="d-block w-100" alt="Wild Landscape" />
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/gallery/img3.jpg" class="d-block w-100" alt="Camera" />
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/gallery/img4.jpg" class="d-block w-100" alt="Exotic Fruits" />
+                  <img src="./img/gallery/img1.jpg" class="d-block w-100" alt="Manikúra/Pedikúra" />
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCrossfade"
@@ -630,21 +624,7 @@
 
   <!-- MDB -->
   <script type="text/javascript" src="js/mdb.umd.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navContainer = document.querySelector('.navbar-collapse');
-
-      if (navContainer) {
-        navContainer.querySelectorAll('.navbar-nav .nav-link, .navbar-brand').forEach(link => {
-          link.addEventListener('click', () => {
-            // Instantly shut the menu container without an animation trigger
-            navContainer.classList.remove('show');
-          });
-        });
-      }
-    });
-
-  </script>
+  <script type="module" src="./js/script.js" defer></script>
 </body>
 
 </html>
