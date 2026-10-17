@@ -21,7 +21,7 @@ const carouselIndicators = document.querySelector(
   "#gallery .carousel-indicators",
 );
 
-const MAX_GALLERY_LENGTH = 15;
+const MAX_GALLERY_LENGTH = 14;
 let i = 2;
 
 while (i <= MAX_GALLERY_LENGTH) {
